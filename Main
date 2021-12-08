@@ -423,7 +423,7 @@ function Kavo.CreateLib(kavName, themeList)
             tabButton.BackgroundTransparency = 1
         end
 
-        UICorner.CornerRadius = UDim.new(0, 5)
+        UICorner.CornerRadius = UDim.new(0, 1)
         UICorner.Parent = tabButton
         table.insert(Tabs, tabName)
 
