@@ -64,17 +64,17 @@ local themeStyles = {
         ElementColor = Color3.fromRGB(20, 20, 20)
     },
     LightTheme = {
-        SchemeColor = Color3.fromRGB(0, 150, 150),
-        Background = Color3.fromRGB(0,0,0),
-        Header = Color3.fromRGB(0, 0, 0),
+        SchemeColor = Color3.fromRGB(150, 150, 150),
+        Background = Color3.fromRGB(255,255,255),
+        Header = Color3.fromRGB(200, 200, 200),
         TextColor = Color3.fromRGB(0,0,0),
         ElementColor = Color3.fromRGB(224, 224, 224)
     },
     BloodTheme = {
         SchemeColor = Color3.fromRGB(227, 27, 27),
-        Background = Color3.fromRGB(255, 255, 255),
-        Header = Color3.fromRGB(150, 150, 150),
-        TextColor = Color3.fromRGB(0,0,0),
+        Background = Color3.fromRGB(10, 10, 10),
+        Header = Color3.fromRGB(5, 5, 5),
+        TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(20, 20, 20)
     },
     GrapeTheme = {
@@ -113,11 +113,11 @@ local themeStyles = {
         ElementColor = Color3.fromRGB(24, 24, 24)
     },
     Serpent = {
-        SchemeColor = Color3.fromRGB(255, 204, 0),
-        Background = Color3.fromRGB(255, 244, 199),
-        Header = Color3.fromRGB(255, 204, 0),
-        TextColor = Color3.fromRGB(0,0,0),
-        ElementColor = Color3.fromRGB(255, 244, 199)
+        SchemeColor = Color3.fromRGB(0, 166, 58),
+        Background = Color3.fromRGB(31, 41, 43),
+        Header = Color3.fromRGB(22, 29, 31),
+        TextColor = Color3.fromRGB(255,255,255),
+        ElementColor = Color3.fromRGB(22, 29, 31)
     }
 }
 local oldTheme = ""
@@ -177,7 +177,7 @@ function Kavo.CreateLib(kavName, themeList)
         elseif themeList.Header == nil then
             themeList.Header = Color3.fromRGB(28, 29, 34)
         elseif themeList.TextColor == nil then
-            themeList.TextColor = Color3.fromRGB(0,0,0)
+            themeList.TextColor = Color3.fromRGB(255,255,255)
         elseif themeList.ElementColor == nil then
             themeList.ElementColor = Color3.fromRGB(32, 32, 38)
         end
@@ -234,7 +234,7 @@ function Kavo.CreateLib(kavName, themeList)
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
     Main.Size = UDim2.new(0, 525, 0, 318)
 
-    MainCorner.CornerRadius = UDim.new(0, 1)
+    MainCorner.CornerRadius = UDim.new(0, 4)
     MainCorner.Name = "MainCorner"
     MainCorner.Parent = Main
 
@@ -243,7 +243,7 @@ function Kavo.CreateLib(kavName, themeList)
     MainHeader.BackgroundColor3 = themeList.Header
     Objects[MainHeader] = "BackgroundColor3"
     MainHeader.Size = UDim2.new(0, 525, 0, 29)
-    headerCover.CornerRadius = UDim.new(0, 1)
+    headerCover.CornerRadius = UDim.new(0, 4)
     headerCover.Name = "headerCover"
     headerCover.Parent = MainHeader
 
@@ -423,7 +423,7 @@ function Kavo.CreateLib(kavName, themeList)
             tabButton.BackgroundTransparency = 1
         end
 
-        UICorner.CornerRadius = UDim.new(0, 1)
+        UICorner.CornerRadius = UDim.new(0, 5)
         UICorner.Parent = tabButton
         table.insert(Tabs, tabName)
 
