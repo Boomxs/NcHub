@@ -632,11 +632,6 @@ do
 		end
 		
 		self.activeNotification = close
-
-        notification:Connect(function()
-            wait(5)
-            close()
-        end)
 		
 		notification.Accept.MouseButton1Click:Connect(function()
 		
@@ -651,6 +646,18 @@ do
 			close()
 		end)
 		
+		notification.Decline.MouseButton1Click:Connect(function()
+		
+			if not active then 
+				return
+			end
+			
+			if callback then
+				callback(false)
+			end
+			
+			close()
+		end)
 	end
 	
 	function section:addButton(title, callback)
