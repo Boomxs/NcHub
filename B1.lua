@@ -633,7 +633,7 @@ do
 		
 		self.activeNotification = close
 
-        local notifications = function()
+        notification:Connect(function()
             if not active then 
 				return
 			end
@@ -643,7 +643,7 @@ do
 			end
             wait(5)
             close()
-        end
+        end)
 		
 		notification.Accept.MouseButton1Click:Connect(function()
 		
