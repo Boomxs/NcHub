@@ -634,13 +634,6 @@ do
 		self.activeNotification = close
 
         notification:Connect(function()
-            if not active then 
-				return
-			end
-			
-			if callback then
-				callback(true)
-			end
             wait(5)
             close()
         end)
